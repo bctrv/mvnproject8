@@ -59,7 +59,7 @@ public class TodosTest {
     }
 
     @Test
-    public void queryTestMeeting() {
+    public void queryTestMeeting1() {
 
         Meeting meeting = new Meeting(
                 555,
