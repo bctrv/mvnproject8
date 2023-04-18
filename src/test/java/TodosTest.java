@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 public class TodosTest {
 
     @Test
-    public void shouldAddThreeTasksOfDifferentType() {
+    public void shouldAddThreeTasksOfDifferentType1() {
         SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
         String[] subtasks = {"Молоко", "Яйца", "Хлеб"};
