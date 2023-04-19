@@ -17,8 +17,9 @@ public class Epic extends Task {
             if (task.matches(query)) {
 
             }
-
+            return true;
         }
-        return true;
+        return false;
     }
+
 }
