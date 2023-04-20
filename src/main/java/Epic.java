@@ -15,9 +15,8 @@ public class Epic extends Task {
         String[] tmp = new String[0];
         for (String task : subtasks) {
             if (task.matches(query)) {
-
+                return true;
             }
-            return true;
         }
         return false;
     }

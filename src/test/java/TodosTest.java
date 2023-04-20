@@ -30,7 +30,7 @@ public class TodosTest {
     }
 
     @Test
-    public void queryTestSimpleTask() {
+    public void TestSimpleTaskTrue() {
 
         todos.add(simpleTask);
 
@@ -41,7 +41,7 @@ public class TodosTest {
     }
 
     @Test
-    public void queryTestSimpleTask2() {
+    public void TestSimpleTaskFalse() {
 
         todos.add(simpleTask);
 
@@ -52,7 +52,7 @@ public class TodosTest {
     }
 
     @Test
-    public void queryTestMeeting1() {
+    public void TestMeetingTrue() {
 
         todos.add(meeting);
 
@@ -63,7 +63,7 @@ public class TodosTest {
     }
 
     @Test
-    public void queryTestMeeting2() {
+    public void TestMeetingFalse() {
 
         todos.add(meeting);
 
@@ -74,7 +74,7 @@ public class TodosTest {
     }
 
     @Test
-    public void queryTestMeeting3() {
+    public void TestMeetingTrue2() {
 
         todos.add(meeting);
 
@@ -85,7 +85,7 @@ public class TodosTest {
     }
 
     @Test
-    public void queryEpicTest() {
+    public void TestEpicTrue() {
 
         todos.add(epic);
 
@@ -129,5 +129,16 @@ public class TodosTest {
         Task[] actual = todos.search("Яйца");
 
         Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void TestEpicFalse() {
+
+        todos.add(epic);
+
+        boolean expected = false;
+        boolean actual = epic.matches("Сыр");
+
+        Assertions.assertEquals(expected, actual);
     }
 }
